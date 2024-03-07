@@ -1,0 +1,14 @@
+{
+  "name": "mysql-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "tsx watch sr"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsc": "^2.0.4",
+    "tsx": "^4.7.1"
+  }
+}
