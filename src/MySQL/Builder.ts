@@ -3,7 +3,7 @@ import { MySQLCommand } from "./Commands/Protocol";
 import { Query } from "./Commands/Query/Query";
 import { Where } from "./Commands/Query/Where";
 
-export class MySQLBuilder extends Builder {
+export class MySQLBuilder extends Builder<MySQLCommand> {
     constructor() {
         super([
             {
@@ -17,9 +17,5 @@ export class MySQLBuilder extends Builder {
         this.addCommand(new Query())
         return this;
     }
-
-    addCommand(...command: MySQLCommand[]) {
-        command.forEach(item => super.addCommand(item))
-        return this
-    }
 }
+

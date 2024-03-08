@@ -6,20 +6,20 @@ type OneTime<T extends new (...args: any[]) => QueryCommand> = {
     clause: string;
 };
 
-export abstract class Builder {
+export abstract class Builder<T extends QueryCommand> {
     constructor(
         protected readonly onlyOneTime: OneTime<any>[]
     ) {}
 
-    commands: QueryCommand[] = [];
+    commands: T[] = [];
 
-    addCommand(...command: QueryCommand[]) {
+    addCommand(...command: T[]) {
         command.forEach(command => this.commands.push(command))
         return this;
     }
 
     build() {
-        const init: Record<string, Array<MySQLCommand>> = {};
+        const init: Record<string, Array<T>> = {};
         const sortedCommands = this.commands
             .sort((a, b) => a.position - b.position)
             .reduce((acc, item) => {
@@ -40,6 +40,6 @@ export abstract class Builder {
             return builded.join(item[0]?.separator || ' ');
         });
 
-        return result.join(' ');
+        return result.join(' ') + ";";
     }
 }
