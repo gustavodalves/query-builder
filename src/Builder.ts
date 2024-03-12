@@ -1,5 +1,5 @@
-import { QueryCommand } from "./Command";
-import { MySQLCommand } from "./MySQL/Commands/Protocol";
+import { QueryCommand } from "query-mysql-builder/src/Command";
+import { MySQLCommand } from "query-mysql-builder/src/MySQL/Commands/Protocol";
 
 type OneTime<T extends new (...args: any[]) => QueryCommand> = {
     instance: T;

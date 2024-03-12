@@ -1,7 +1,7 @@
-import { Builder } from "../Builder";
-import { MySQLCommand } from "./Commands/Protocol";
-import { Query } from "./Commands/Query/Query";
-import { Where } from "./Commands/Query/Where";
+import { Builder } from "query-mysql-builder/src/Builder";
+import { MySQLCommand } from "query-mysql-builder/src/MySQL/Commands/Protocol";
+import { Query } from "query-mysql-builder/src/MySQL/Commands/Query/Query";
+import { Where } from "query-mysql-builder/src/MySQL/Commands/Query/Where";
 
 export class MySQLBuilder extends Builder<MySQLCommand> {
     constructor() {

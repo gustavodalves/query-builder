@@ -1,4 +1,4 @@
-import { MySQLCommand } from "../../Protocol";
+import { MySQLCommand } from "query-mysql-builder/src/MySQL/Commands/Protocol";
 
 export abstract class Join implements MySQLCommand {
     readonly position: number = 4;

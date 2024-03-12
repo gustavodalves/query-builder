@@ -1,10 +1,11 @@
 {
-  "name": "mysql-builder",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "query-mysql-builder",
+  "version": "1.0.4",
+  "main": "build/index.js",
+  "types": "types/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "test": "tsx watch sr"
+    "build": "tsc"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",

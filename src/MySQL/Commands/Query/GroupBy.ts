@@ -1,4 +1,4 @@
-import { MySQLCommand } from "../Protocol";
+import { MySQLCommand } from "query-mysql-builder/src/MySQL/Commands/Protocol";
 
 export class GroupBy implements MySQLCommand {
     position: number = 7;

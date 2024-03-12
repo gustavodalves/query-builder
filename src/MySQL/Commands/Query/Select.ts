@@ -1,4 +1,4 @@
-import { MySQLCommand } from "../Protocol";
+import { MySQLCommand } from "query-mysql-builder/src/MySQL/Commands/Protocol";
 
 export class Select implements MySQLCommand {
     position = 1
